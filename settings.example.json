@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "model": "sonnet",
+  "effortLevel": "high",
+  "theme": "dark",
+  "tui": "fullscreen",
+  "enableWorkflows": true,
+  "inputNeededNotifEnabled": true,
+  "agentPushNotifEnabled": true,
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node ~/.claude/hooks/web-stack-chooser.mjs 2>/dev/null || true",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "gitkraken-hooks@gitkraken": true,
+    "rive-interactive@claude-design-skillstack": true,
+    "animejs@claude-design-skillstack": true,
+    "react-spring-physics@claude-design-skillstack": true,
+    "lottie-animations@claude-design-skillstack": true,
+    "gsap-scrolltrigger@claude-design-skillstack": true,
+    "react-three-fiber@claude-design-skillstack": true,
+    "spline-interactive@claude-design-skillstack": true,
+    "blender-web-pipeline@claude-design-skillstack": true,
+    "motion-framer@claude-design-skillstack": true,
+    "modern-web-design@claude-design-skillstack": true,
+    "web3d-integration-patterns@claude-design-skillstack": true,
+    "threejs-webgl@claude-design-skillstack": true,
+    "babylonjs-engine@claude-design-skillstack": true,
+    "playcanvas-engine@claude-design-skillstack": true,
+    "pixijs-2d@claude-design-skillstack": true,
+    "aframe-webxr@claude-design-skillstack": true,
+    "locomotive-scroll@claude-design-skillstack": true,
+    "barba-js@claude-design-skillstack": true,
+    "scroll-reveal-libraries@claude-design-skillstack": true,
+    "lightweight-3d-effects@claude-design-skillstack": true,
+    "animated-component-libraries@claude-design-skillstack": true,
+    "substance-3d-texturing@claude-design-skillstack": true
+  },
+  "extraKnownMarketplaces": {
+    "claude-design-skillstack": {
+      "source": {
+        "source": "github",
+        "repo": "freshtechbro/claudedesignskills"
+      }
+    }
+  },
+  "permissions": {
+    "additionalDirectories": [
+      "/tmp",
+      "/private/tmp"
+    ]
+  }
+}
